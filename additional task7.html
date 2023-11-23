@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var di = document.createElement("div")
+        var p = document.createElement("p")
+        var lab1 = document.createElement("label")
+        lab1.innerHTML = "Enter the data : "
+        var inp1 = document.createElement("input")
+
+
+        var inp5 = document.createElement("button")
+        inp5.innerHTML = "click"
+
+        p.append(lab1)
+        p.append(inp1)
+        di.append(p)
+        di.append(inp5)
+
+        document.body.append(di)
+
+
+        inp5.addEventListener('click', function () {
+            counti()
+            function counti() {
+              var inp = inp1.value
+                var al = 0;
+                var vo = 0;
+                var noo = 0;
+                var con = 0
+                for ( var i = 0; i < inp.length; i++) {
+                    var str = inp[i].toLowerCase()
+                    if (/[a-z]/.test(str)) {
+                        al++;
+
+                        if ("aeiou".includes(str)) {
+                            vo++
+
+                        }
+                        else {
+                            con++;
+                        }
+                    } 
+                    if (/[0-9]/.test(str)) {
+                        noo++;
+                    }
+                }
+
+            document.getElementById("txt").innerHTML = `Alphabets: ${al}, Vowels: ${vo}, Consonants: ${con}, Numbers: ${noo}`;
+
+            }
+            inp1.value=""
+        })
+
+        </script>
+     <div id="txt"></div>
+
+</body>
+
+</html>

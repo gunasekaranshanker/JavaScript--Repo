@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        let ob={
+            poster:"https://wallpaperbuzz.net/wp-content/uploads/2023/08/rajinikant-jailer-hd-photos-768x512.jpg",
+            Name:"Jailer",
+            hero:" Rajinikanth",
+            starring:"Ramya Krishnan,Vasanth Ravi,Vinayakan",
+            Director:"Nelson Dilipkumar",
+            Music:"Anirudh Ravichander",
+         }
+         let di=document.createElement("div")
+         di.style.backgroundColor="wheat"
+         di.style.height="550px"
+         di.style.width="500px"
+        
+         let h=document.createElement("h1")
+         h.innerHTML=ob.Name
+         h.style.color="red"
+         h.style.textAlign="center"
+         let im=document.createElement("img")
+         im.setAttribute("src",ob.poster)
+         im.style.height="300px"
+         im.style.width="500px"
+         let p=document.createElement("h2")
+         p.innerHTML=ob.hero
+         p.style.color="red"
+         p.style.textAlign="center"
+         let pa=document.createElement("p")
+         pa.innerHTML=ob.starring
+         pa.style.color="blue"
+         pa.style.fontStyle="italic"
+         pa.style.textAlign="center"
+         let d=document.createElement("p")
+         d.innerHTML=ob.Director
+         d.style.textAlign="center"
+         let mu=document.createElement("p")
+         mu.innerHTML=ob.Music
+         mu.style.textAlign="center"
+       di.append(h)
+       di.append(im)
+       di.append(p)
+       di.append(pa)
+       di.append(d)
+       di.append(mu)     
+        
+        document.body.append(di)
+    </script>
+</body>
+</html>

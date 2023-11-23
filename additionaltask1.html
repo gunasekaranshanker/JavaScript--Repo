@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .a {
+            height: 400px;
+            width: 300px;
+            background-color: rgb(220, 255, 196);
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(232, 131, 151);
+
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(135, 196, 222);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-5 col-lg-5 text-center">
+            <form action="method=" class="form-control">
+                <table style="margin-left: 100px;margin-top: 30px;" class=" a">
+                    <thead>
+                        <h1 class="mt-4">Student Mark Statement</h1>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label for="name">Roll No:</label>
+                            </th>
+                            <td> <input type="text" id="rollno" required /></td>
+                        </tr>
+                        <tr>
+                            <th> <label for="name">Name:</label></th>
+                            <td> <input type="text" id="name" required /> </td>
+                        </tr>
+
+                        <tr>
+                            <th><label for="name">Mark1:</label></th>
+                            <td> <input type="number" id="mark1" required /> </td>
+                        </tr>
+                        <tr>
+                            <th> <label for="name">Mark2:</label></th>
+                            <td> <input type="number" id="mark2" required /> </td>
+                        </tr>
+                        <tr>
+                            <th> <label for="name">Mark3:</label> </th>
+                            <td> <input type="number" id="mark3" required /> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="button" onclick="func()" value="submit" style="margin-top: 30px;">
+                <input type="button" onclick="res()" value="reset">
+
+            </form>
+
+        </div>
+        <div class="col col col-12 col-sm-12 col-md-7 col-lg-7">
+            <div style="margin-top: 100px;">
+                <table class="table-bordered">
+                    <tr>
+                        <th style="width: 100px;">Roll No</th>
+                        <th style="width: 100px;">Name</th>
+                        <th style="width: 100px;">Mark1</th>
+                        <th style="width: 100px;">Mark2</th>
+                        <th style="width: 100px;">Mark3</th>
+                        <th style="width: 100px;">Total</th>
+                        <th style="width: 100px;">Average</th>
+                        <th style="width: 100px;">Result</th>
+                        <th style="width: 100px;">Grade</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tb">
+
+                    </tbody>
+                    <thead>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function func() {
+            let roll = document.getElementById("rollno").value
+            let nam = document.getElementById("name").value
+            let ma1 = parseInt(document.getElementById("mark1").value)
+            let ma2 = parseInt(document.getElementById("mark2").value)
+            let ma3 = parseInt(document.getElementById("mark3").value)
+            let total = ma1 + ma2 + ma3;
+            let avg = total / 3;
+            let avg1 = avg.toFixed(2)
+
+            
+            if ((ma1>=30)&&(ma2>=30)&&(ma3>=0)) {
+                
+              var result="pass"
+            }
+            else{
+                result="Fail"
+                var grade="NS"
+            }
+           
+             if (total >= 275) {
+                var grade = "S"
+            }
+            else if (total >= 250) {
+                var grade = "O"
+            }
+            else if ((total >= 200) && (total < 250)) {
+                var grade = "A"
+            }
+            else if ((total >= 150) && (total < 200)) {
+                var grade = "B"
+            }
+            else if ((total >= 90) && (total < 150)) {
+                var grade = "p"
+            }
+            else {
+        
+               var grade="NS"
+
+             }
+             
+            
+            document.getElementById("tb").innerHTML += `<tr>
+                <td>${roll}</td>
+                <td>${nam}</td>
+                <td>${ma1}</td>
+                <td>${ma2}</td>
+                <td>${ma3}</td>
+                <td>${total}</td>
+                <td>${avg1}</td> 
+                <td>${result}</td>
+                <td>${grade}</td></tr>`
+            document.getElementById("rollno").value = ""
+            document.getElementById("name").value = ""
+            document.getElementById("mark1").value = ""
+            document.getElementById("mark2").value = ""
+            document.getElementById("mark3").value = ""
+        }
+        
+       
+        
+    
+        function res() {
+            document.getElementById("rollno").value = ""
+            document.getElementById("name").value = ""
+            document.getElementById("mark1").value = ""
+            document.getElementById("mark2").value = ""
+            document.getElementById("mark3").value = ""
+            document.getElementById("tb").value=""
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

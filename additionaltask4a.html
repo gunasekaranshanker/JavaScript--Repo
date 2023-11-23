@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <script src="https://kit.fontawesome.com/04ccb70358.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .input {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        .education-entry {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        th,td{
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <label for="naam">Name</label>
+        <input id="naam" type="text" class="input" /><br /><br />
+        <label for="role">Role</label>
+        <input id="role" type="text" class="input" /><br /><br />
+        <label for="email">Email</label>
+        <input id="email" type="email" class="input" /><br /><br />
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" class="input" /><br /><br />
+        <label for="summ">Objective or Summary</label>
+        <textarea id="summ" cols="30" rows="10"></textarea><br /><br>
+
+        <div class="section">
+          
+            <div class="education">
+                <div class="education-entry">
+                    <h2>Education details</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Education Detials</th>
+                                <th>Instution Name</th>
+                                <th>Year of Passing</th>
+                                <th>Percentage or CGPA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>SSLC</th>
+                                <td><input id="sslc-school" type="text" class="input" /></td>
+                                <td><input id="sslc-year" type="number" class="input" /></td>
+                                <td><input id="sslc-cgpa" type="number" class="input" /></td>
+                            </tr>
+                            <tr>
+                                <th>HSLC/Diploma</th>
+                                <td><input id="hslc-diploma-school" type="text" class="input" /></td>
+                                <td><input id="hslc-diploma-year" type="number" class="input" /></td>
+                                <td><input id="hslc-diploma-cgpa" type="number" class="input" /></td>
+                            </tr>
+                            <tr>
+                                <th>UG</th>
+                                <td><input id="ug-school" type="text" class="input" /></td>
+                                <td> <input id="ug-year" type="number" class="input" /></td>
+                                <td><input id="ug-cgpa" type="number" class="input" /></td>
+                            </tr>
+                            <tr>
+                                <th>PG</th>
+                                <td><input id="pg-school" type="text" class="input" /></td>
+                                <td><input id="pg-year" type="number" class="input" /></td>
+                                <td><input id="pg-cgpa" type="number" class="input" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Work Experience</h2>
+            <textarea id="we" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="section">
+            <h2>Achievements</h2>
+            <textarea id="acc" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <textarea id="pro" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="section">
+            <h2>Certifications and Training</h2>
+            <textarea id="cer" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <input type="button" value="print the resume" onclick="newDoc()">
+
+    <script>
+        function newDoc() {
+            let url = "additionaltask4.html?";
+            window.location.assign(url);
+
+            var fnaam=document.getElementById("naam").value
+            localStorage.setItem("Name",fnaam)
+            var rolee=document.getElementById("role").value
+            localStorage.setItem("Role",rolee)
+            var eemail=document.getElementById("email").value
+            localStorage.setItem("Email",eemail)
+            var pphone=document.getElementById("phone").value
+            localStorage.setItem("Phone",pphone)
+            var ssumm=document.getElementById("summ").value
+            localStorage.setItem("Summary",ssumm)
+            var sslcsc=document.getElementById("sslc-school").value
+            localStorage.setItem("sslcsc",sslcsc)
+            var sslcyea=document.getElementById("sslc-year").value
+            localStorage.setItem("sslcyear",sslcyea)
+            var sslccgp=document.getElementById("sslc-cgpa").value
+            localStorage.setItem("sslccgpa",sslccgp)
+            var hslcsc=document.getElementById("hslc-diploma-school").value
+            localStorage.setItem("hslcsc",hslcsc)
+            var hslcyea=document.getElementById("hslc-diploma-year").value
+            localStorage.setItem("hslcyear",hslcyea)
+            var hslccgp=document.getElementById("hslc-diploma-cgpa").value
+            localStorage.setItem("hslccgpa",hslccgp)
+            var ugsc=document.getElementById("ug-school").value
+            localStorage.setItem("ugsc",ugsc)
+            var ugyea=document.getElementById("ug-year").value
+            localStorage.setItem("ugyear",ugyea)
+            var ugcgp=document.getElementById("ug-cgpa").value
+            localStorage.setItem("ugcgpa",ugcgp)
+            var pgsc=document.getElementById("pg-school").value
+            localStorage.setItem("pgsc",pgsc)
+            var pgyea=document.getElementById("pg-year").value
+            localStorage.setItem("pgyear",pgyea)
+            var pgcgp=document.getElementById("pg-cgpa").value
+            localStorage.setItem("pgcgpa",pgcgp)
+            var wex=document.getElementById("we").value
+            localStorage.setItem("wex",wex)
+            var acche=document.getElementById("acc").value
+            localStorage.setItem("acche",acche)
+            var proj=document.getElementById("pro").value
+            localStorage.setItem("proj",proj)
+            var cert=document.getElementById("cer").value
+            localStorage.setItem("cert",cert)
+        }
+
+    </script>
+</body>
+
+</html>

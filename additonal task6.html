@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let di=document.createElement("div")
+        let p=document.createElement("p")
+        let lab1=document.createElement("label")
+        lab1.innerHTML="Principle : "
+        let inp1=document.createElement("input")
+        inp1.setAttribute('type','number')
+
+        let p1=document.createElement("p")
+        let lab2=document.createElement("label")
+        lab2.innerHTML="Rate of interest : "
+        let inp2=document.createElement("input")
+        inp1.setAttribute('type','number')
+        
+        let p2=document.createElement("p")
+        let lab3=document.createElement("label")
+        lab3.innerHTML="year : "
+        let inp3=document.createElement("input")
+        inp3.setAttribute('type','number')
+        let inp4=document.createElement("button")
+        inp4.innerHTML="calculate"
+        inp4.addEventListener('click',function(){
+            let total=parseInt(inp1.value*inp2.value*inp3.value)/100
+            inp5.value=parseInt(total)+parseInt(inp1.value)
+
+        })
+        let p4=document.createElement("p")
+        let lab4=document.createElement("label")
+        lab4.innerHTML="Amount : "
+        let inp5=document.createElement("input")
+        inp5.setAttribute('type','number')
+        
+        p.append(lab1)
+        p.append(inp1)
+
+        di.append(p)
+        p1.append(lab2)
+        p1.append(inp2)
+        di.append(p1)
+        p2.append(lab3)
+        p2.append(inp3)
+        di.append(p2)
+        
+        di.append(inp4)
+        p4.append(lab4)
+        p4.append(inp5)
+        di.append(p4)
+    
+        document.body.append(di)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .container p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Resume</h1>
+    <div class="container">
+        <h1 id="naam1"></h1>
+        <h3 id="role"></h3>
+        <p id="email"></p>
+        <p id="phone"></p>
+        <h2>Objective:</h2>
+        <p id="summ"></p>
+    </div>
+    <div class="container">
+        <h2>Education Detials</h2>
+        <table border="2px solid black">
+            <thead>
+                <tr>
+                    <th>BOARD</th>
+                    <th>School Name</th>
+                    <th>Year of Passing</th>
+                    <th>Percentage or CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SSLC</td>
+                    <td id="sslc-school"></td>
+                    <td id="sslc-year"></td>
+                    <td id="sslc-cgpa"></td>
+                </tr>
+                <tr>
+                    <td>HSLC/DIPLOMA</td>
+                    <td id="hslc-diploma-school"></td>
+                    <td id="hslc-diploma-year"></td>
+                    <td id="hslc-diploma-cgpa"></td>
+                </tr>
+                <tr>
+                    <td>UG</td>
+                    <td id="ug-school"></td>
+                    <td id="ug-year"></td>
+                    <td id="ug-cgpa"></td>
+                </tr>
+                <tr>
+                    <td>PG</td>
+                    <td id="pg-school"></td>
+                    <td id="pg-year"></td>
+                    <td id="pg-cgpa"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+         <div class="container">
+        <h3>Work Experience</h3>
+        <p id="woex"></p>
+    </div>
+     <div class="container">
+        <h3>Achievement</h3>
+        <p id="acch"></p>
+    </div>
+     <div class="container">
+        <h3>Projects</h3>
+        <p id="proo"></p>
+    </div>
+     <div class="container">
+        <h3>Certifications and Training</h3>
+        <p id="cetr"></p>
+    </div>
+    </div>
+
+<script>
+        document.getElementById("naam1").innerHTML = localStorage.getItem("Name")
+        document.getElementById("role").innerHTML = localStorage.getItem("Role")
+        document.getElementById("email").innerHTML = localStorage.getItem("Email")
+        document.getElementById("phone").innerHTML = localStorage.getItem("Phone")
+        document.getElementById("summ").innerHTML = localStorage.getItem("Summary")
+        document.getElementById("sslc-school").innerHTML = localStorage.getItem("sslcsc")
+        document.getElementById("sslc-year").innerHTML = localStorage.getItem("sslcyear")
+        document.getElementById("sslc-cgpa").innerHTML = localStorage.getItem("sslccgpa")
+        document.getElementById("hslc-diploma-school").innerHTML = localStorage.getItem("hslcsc") 
+        document.getElementById("hslc-diploma-year").innerHTML = localStorage.getItem("hslcyear")
+        document.getElementById("hslc-diploma-cgpa").innerHTML = localStorage.getItem("hslccgpa") 
+        document.getElementById("ug-school").innerHTML = localStorage.getItem("ugsc")     
+        document.getElementById("ug-year").innerHTML = localStorage.getItem("ugyear")
+        document.getElementById("ug-cgpa").innerHTML = localStorage.getItem("ugcgpa")
+        document.getElementById("pg-school").innerHTML = localStorage.getItem("pgsc")
+        document.getElementById("pg-year").innerHTML = localStorage.getItem("pgyear")
+        document.getElementById("pg-cgpa").innerHTML = localStorage.getItem("pgcgpa") 
+        document.getElementById("acch").innerHTML = localStorage.getItem("wex") 
+        document.getElementById("woex").innerHTML = localStorage.getItem("acche")   
+        document.getElementById("proo").innerHTML = localStorage.getItem("proj")   
+        document.getElementById("cetr").innerHTML = localStorage.getItem("cert")      
+</script>
+
+
+
+</body> 
+
+</html>

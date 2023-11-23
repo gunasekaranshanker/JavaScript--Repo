@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date of Birth</h1>
+    <label for="date">DOB : </label>
+    <input type="date" id="dob"/></br></br>
+    <button onclick="func()"> click</button></br></br>
+    <label for="date">Date -5 : </label>
+    <input type="text" id="txt1"/></br></br>
+    <label for="date">Date +5 : </label>
+    <input type="text" id="txt2"/>
+
+    <script>
+        function func(){
+         
+        var a=document.getElementById("dob").value
+        let dat=new Date(a)
+        let ta1=(dat.getDate()-5)
+        let mn=dat.getMonth()
+        let y=dat.getFullYear()
+       let tx=new Date(y,mn,ta1)
+       let ta12=(dat.getDate()+5)
+       let tx1=new Date(y,mn,ta12)
+           document.getElementById("txt1").value=tx
+           document.getElementById("txt2").value=tx1
+            } 
+        
+    </script>
+</body>
+</html>

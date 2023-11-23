@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">value :</label>
+    <input type="number" id="txt" onkeydown="ent()" />
+    <select id="sel" ></select>
+    <select id="se" onclick="fun()"></select>
+    <script>
+        function ent() {
+            let a = document.getElementById("txt").value
+
+                let i=1
+                for(i=1;i<=a;i++){
+                document.getElementById("sel").innerHTML += `<option>${i}</option>`
+               
+            }
+        }
+        function fun(){
+            let b = document.getElementById("sel").value
+
+                let j=0
+                for(j=1;j<=b;j++){
+                document.getElementById("se").innerHTML += `<option>${j}</option>`
+                document.getElementById("txt").value =""
+                document.getElementById("se").value =""
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>

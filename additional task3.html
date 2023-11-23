@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let d=document.createElement("div")
+       let l=document.createElement("p")
+            l.innerHTML="Enter the Data:"
+        let i=document.createElement("input")
+        let s=document.createElement("select")
+        let lt=document.createElement("ul")
+    
+     let b= document.createElement("button")
+     b.innerHTML="click"
+    
+     b.addEventListener('click',function() {
+        let va1=i.value;
+        if(va1==""){
+            alert("enter the data")
+        }
+        else{
+            let op1=document.createElement("option")
+            op1.innerHTML=va1
+            let lt1=document.createElement("li")
+            lt1.innerHTML=va1
+            s.append(op1)
+            lt.append(lt1)
+            i.value=""
+        }
+
+     })
+     
+     
+    
+     
+    
+        d.append(l)
+          d.append(i)
+          d.append(b)
+    
+            d.append(s)
+          
+          d.append(lt)
+          document.body.append(d)
+    </script>
+</body>
+</html>

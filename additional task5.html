@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        let di=document.createElement("div")
+        di.style.width="500px"
+        
+        di.style.backgroundColor="wheat"
+        di.style.marginLeft="20px"
+
+        let h=document.createElement("h1")
+        
+        h.style.fontStyle="bold"
+        h.innerHTML="Hotel RooM Booking"
+        h.style.marginLeft="200px"
+        h.style.color="blue"
+        let p=document.createElement("p")
+        p.style.marginLeft="20px"
+        let lab1=document.createElement("label")
+        lab1.innerHTML=" Room Type : "
+        lab1.style.fontStyle="bold"
+        lab1.style.fontSize="25px"
+        let inp1=document.createElement("select")
+    
+        inp1.innerHTML=`<option>Please select the room</option><option>NonAc Single Bed room</option><option>NonAc Double Bed room</option><option>Ac Single Bed room</option><option>Ac Double Bed room</option><option>NonAc Party Room</option><option>Ac Party room</option></br>`
+        inp1.style.height="30px"
+        inp1.style.width="300px"
+        let input1=inp1.value
+        let p1=document.createElement("p")
+        p1.style.marginLeft="20px"
+        let lab2=document.createElement("label")
+        lab2.innerHTML=" Number of Guests : "
+        lab2.style.fontStyle="bold"
+        lab2.style.fontSize="20px"
+        let inp2=document.createElement("input")
+        inp2.setAttribute("type","number")
+        inp2.style.height="30px"
+        inp2.style.width="200px"
+        inp2.placeholder="please select the no of guests"
+        let input2=inp2.value
+        let p2=document.createElement("p")
+        p2.style.marginLeft="20px"
+        let lab3=document.createElement("label")
+        lab3.innerHTML=" Name : "
+        lab3.style.fontStyle="bold"
+        lab3.style.fontSize="20px"
+        let inp3=document.createElement("input")
+        inp3.style.height="30px"
+        inp3.style.width="150px"
+        inp3.placeholder="First Name"
+        let input3=inp3.value
+        let inp4=document.createElement("input")
+        inp4.style.height="30px"
+        inp4.style.width="150px"
+        inp4.placeholder="Last Name"
+        inp4.style.marginLeft="50px"
+        let input4=inp4.value
+        let p4=document.createElement("p")
+        p4.style.marginLeft="20px"
+        let lab4=document.createElement("label")
+        lab4.innerHTML=" Email id : "
+        lab4.style.fontStyle="bold"
+        lab4.style.fontSize="20px"
+        let inp5=document.createElement("input")
+        inp5.setAttribute("type","email")
+        inp5.style.height="30px"
+        inp5.style.width="300px"
+        let input5=inp5.value
+        let p5=document.createElement("p")
+        p5.style.marginLeft="20px"
+        let lab5=document.createElement("label")
+        lab5.innerHTML=" Arrival : "
+        lab5.style.fontStyle="bold"
+        lab5.style.fontSize="20px"
+        let inp6=document.createElement("input")
+        inp6.setAttribute("type","date")
+        inp6.style.height="30px"
+        inp6.style.width="150px"
+        let input6=inp6.value
+        let inp7=document.createElement("input")
+        inp7.setAttribute("type","time")
+        inp7.style.height="30px"
+        inp7.style.width="100px"
+        inp7.style.marginLeft="20px"
+        let input7=inp7.value
+        let p6=document.createElement("p")
+        p6.style.marginLeft="20px"
+        let lab6=document.createElement("label")
+        lab6.innerHTML=" Departure : "
+        lab6.style.fontStyle="bold"
+        lab6.style.fontSize="20px"
+        let inp8=document.createElement("input")
+        inp8.setAttribute("type","date")
+        inp8.style.height="30px"
+        inp8.style.width="150px"
+        let input8=inp8.value
+        let inp9=document.createElement("input")
+        inp9.setAttribute("type","time")
+        inp9.style.height="30px"
+        inp9.style.width="100px"
+        inp9.style.marginLeft="20px"
+        let input9=inp9.value
+        let p7=document.createElement("p")
+        p7.style.marginLeft="20px"
+        let inp10=document.createElement("input")
+        inp10.setAttribute("type","checkbox")
+        let input10=inp10.value
+        let lab7=document.createElement("label")
+        lab7.innerHTML=" Free Pickup  "
+        lab7.style.fontStyle="bold"
+        lab7.style.fontSize="20px"
+        let lab8=document.createElement("label")
+        lab8.innerHTML=" No,i will take care "
+        lab8.style.fontStyle="bold"
+        lab8.style.fontSize="20px"
+        let inp11=document.createElement("input")
+        inp11.setAttribute("type","checkbox")
+        let input11=inp11.value
+        let p8=document.createElement("p")
+        p8.style.marginLeft="20px"
+        let lab9=document.createElement("label")
+        lab9.innerHTML=" Other Requests : "
+        lab9.style.fontStyle="bold"
+        lab9.style.fontSize="20px"
+        let inp12=document.createElement("textarea")
+        // inp2.setAttribute("type","number")
+        inp12.style.height="200px"
+        inp12.style.width="400px"
+        let input12=inp12.value
+        let p9=document.createElement("p")
+       
+        let inp13=document.createElement("button")
+        inp13.innerHTML="Booknow"
+        inp13.style.backgroundColor="pink"
+        inp13.style.marginLeft="200px"
+        inp13.addEventListener('click',function(){
+            document.getElementById("tb").innerHTML=`<tr><td>${inp1.value}</td><td>${inp2.value}</td><td>${inp14.value}</td><td>${inp3.value}${inp4.value}</td><td>${inp5.value}</td><td>${inp6.value}${inp7.value}</td><td>${inp8.value}${inp9.value}</td><td>${inp10.checked}</td><td>${inp11.checked}</td><td>${inp12.value}</td></tr>`
+
+        })
+       
+        let inp15=document.createElement("button")
+        inp15.innerHTML="Reset"
+        inp15.style.backgroundColor="aqua"
+        inp15.style.marginLeft="10px"
+        inp15.addEventListener('click',function() {
+           [inp1.value="", inp1.value="", inp2.value="", inp3.value="", inp4.value="", inp5.value="",inp6.value="",inp7.value="",inp8.value="",inp9.value="",inp10.value="",inp11.value="",inp12.value="",inp13.value="",inp14.value=""]
+        })
+        let p10=document.createElement("p")
+        p10.style.marginLeft="20px"
+        let lab14=document.createElement("label")
+        lab14.innerHTML=" Number of Room Required : "
+        lab14.style.fontStyle="bold"
+        lab14.style.fontSize="20px"
+        
+        let inp14=document.createElement("input")
+        inp14.setAttribute("type","number")
+        inp14.style.height="30px"
+        inp14.style.width="200px"
+        inp14.placeholder="please select the no of room"
+        let input14=inp14.value
+       
+        di.append(h)
+        p.append(lab1)
+        p.append(inp1)
+        di.append(p)
+        p1.append(lab2)
+        p1.append(inp2)
+        di.append(p1)
+        p10.append(lab14)
+        p10.append(inp14)
+        di.append(p10)
+        p2.append(lab3)
+        p2.append(inp3)
+        p2.append(inp4)
+        di.append(p2)
+        p4.append(lab4)
+        p4.append(inp5)
+        di.append(p4)
+        p5.append(lab5)
+        p5.append(inp6)
+        p5.append(inp7)
+        di.append(p5)
+        p6.append(lab6)
+        p6.append(inp8)
+        p6.append(inp9)
+        di.append(p6)
+        
+        p7.append(inp10)
+        p7.append(lab7)
+        p7.append(inp11)
+        p7.append(lab8)
+        
+        
+        di.append(p7)
+        p8.append(lab9)
+        p8.append(inp12)
+        di.append(p8)
+        
+        p9.append(inp13)
+        p9.append(inp15)
+        di.append(p9)
+       
+        
+       
+
+        document.body.append(di)
+    </script>
+     <table border="1px solid">
+        <thead>
+            <th>Room type</th>
+            <th>Number of guests</th>
+            <th>Number of room Required</th>
+            <th>Name</th>
+            <th>Email id</th>
+            <th>Arrival</th>
+            <th>Departure</th>
+            <th>Free pickup</th>
+            <th>No,thanks</th>
+            <th>other Requests</th>
+        </thead>
+        <tbody id="tb"></tbody>
+    </table>
+</body>
+</html>

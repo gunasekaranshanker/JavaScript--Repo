@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            background-color: black;
+            height: 600px;
+            width: 400px;
+        position: relative;
+        }
+.d{
+    height: 300px;
+    width: 200px;
+/* background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"); */
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+left: 80px;
+top:100px;
+}
+.bulb{
+    /* background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"); */
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+left: 150px;
+}
+.switch{
+    height: 100px;
+    width: 200px;
+    background-color: rgb(158, 155, 155);
+    text-align: center;
+    position: absolute;
+    left: 80px;
+    top:400px
+}
+.eye{
+    
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+left:80px;
+top:100px
+}
+.eye{
+    
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+left:80px;
+top:100px}
+</style>
+</head>
+<body>
+    <div class="div">
+        <div class="bulb">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png" id="bulbon" style="height:100px;width: 70px;">
+        </div>
+        <div class="bulb">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" id="bulboff" style="width: 70px;height: 100px;">
+        </div>
+        <div class="d">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png" height="250px" id="caton">
+        </div>
+<div class="switch">
+    <h2>switch</h2>
+    <button id="on" onclick="on()">On</button>
+    <button  id="off"onclick="off()">OFF</button>
+</div>
+<div class="eye">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" id="catoff" style="width: 200px;">
+</div>
+
+
+    </div>
+    <script>
+    function off(){
+        document.getElementById("bulbon").style.display="none"
+        document.getElementById("caton").style.display="none"
+        document.getElementById("catoff").style.display="block"
+        document.getElementById("bulboff").style.display="block"
+        document.getElementById("off").style.backgroundColor="red"
+        document.getElementById("on").style.backgroundColor="white" 
+
+    }
+    off()
+    function on(){
+        document.getElementById("bulbon").style.display="block"
+        document.getElementById("caton").style.display="block"
+        document.getElementById("catoff").style.display="none"
+        document.getElementById("bulboff").style.display="none"
+        document.getElementById("on").style.backgroundColor="green"
+        document.getElementById("off").style.backgroundColor="white"
+
+    }
+    </script>
+</body>
+</html>

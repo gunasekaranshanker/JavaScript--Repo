@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var side1=prompt("Enter the side1:")
+        var side2=prompt("Enter the side2:")
+        var side3=prompt("Enter the side3:")
+
+        function find(side1, side2, side3){
+            if((side1==side2)&&(side2==side3)&&(side1==side3))
+            {
+                document.write(" Equilateral triangle")
+            }
+            else if((side1==side2)||(side2==side3))
+            {
+                document.write("Isosceles triangle")
+            }
+            else
+            {
+            document.write("Scalene triangle")
+            }
+        }
+        find(side1, side2, side3)
+    </script>
+</body>
+</html>

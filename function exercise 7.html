@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let month=prompt("enter the month")
+        let year=prompt("enter the year")
+        function findDaysInMonth(){
+       if (month==2){
+        if((year%400==0)&&(year%100!=0)||(year%4==0)){
+             document.write("the month has 29days")
+            
+        }
+            else  {
+                document.write("the month has 28 days")
+            }
+        }
+        else if(( month==4)||( month==6)){
+            document.write("the month has 30 days" )
+        }
+       else if(month>=13){
+            document.write("invalid month")
+        }
+
+        else if(( month==9)||( month==11)){
+            document.write("the month has 30 days" )
+        }
+    
+        else{
+            document.write("The month has 31 days" )
+        }
+    }
+        findDaysInMonth()
+    </script>
+</body>
+</html>

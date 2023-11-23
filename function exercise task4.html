@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          // let num1=prompt("enter the value")
+          // let num2=prompt("enter the value")
+          // let c=prompt("enter the symbol")
+        
+        function evalNumbers(num1,num2){
+          {
+                var add=num1+num2,sub=num1-num2,multi=num1*num2
+                document.write( "addition:",add,"<br/>","subtract: ", sub,"<br/>","multiply: ",multi,"<br/>")
+              //  var sub=num1-num2
+                // document.write("subtract: ", sub,"<br/>")
+              //  var multi=num1*num2
+                // document.write("multiply: ",multi,"<br/>")
+               if(num2!=0) 
+                {
+                   var div=num1/num2
+                   document.write("division: ",div,"<br/>")
+
+                }
+                else{
+                  document.write("zero is not divided by any number","<br/>")
+                }
+                if(num2!=0) 
+                {
+                   var mod=num1%num2
+                   document.write("modulus: ",mod,"<br/>")
+
+                }
+                else{
+                  document.write("zero is not divided by any number","<br/>")
+                }
+                
+                
+
+
+
+        }}
+        evalNumbers(10,0)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>password field</h1>
+    <label for="name">User Id :</label>
+    <input type="name" id="nam"/></br></br>
+    <label for="date">DOB : </label>
+    <input type="date" id="dob"/></br></br>
+    <button onclick="func()">submit</button></br></br>
+    <label for="password">password :</label>
+    <input type="text" id="txt"/>
+    
+    <script>
+    function func(){
+
+       let a= document.getElementById("nam").value
+       let b= document.getElementById("dob").value
+       
+    
+       let nam=a.slice(0,4)
+       let dat=b.slice(0,4)
+       let pa=nam.concat(dat)
+       txt.value=pa
+    }
+</script>
+</body>
+</html>
